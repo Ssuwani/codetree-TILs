@@ -14,6 +14,7 @@ else:
         for i in range(n - m + 1):
             if len(set(line[i: i+m])) == 1:
                 happy += 1
+                break
 
     for line in grid_T:
         for i in range(n - m + 1):
