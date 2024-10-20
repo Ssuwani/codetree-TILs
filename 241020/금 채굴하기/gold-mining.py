@@ -35,7 +35,7 @@ def get_gold_count(x, y, K) -> int:
 max_gold = 0
 for i in range(n):
     for j in range(n):
-        for K in range(0, n):
+        for K in range(0, n+1):
             price = K * K + (K + 1) * (K + 1)
             gold_cnt = get_gold_count(i, j, K)
             profit = m * gold_cnt
