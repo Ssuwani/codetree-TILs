@@ -8,7 +8,7 @@ grid[1] = grid[1][::-1]
 
 for _ in range(t):
     # t번 반복
-    grid[0], grid[1] = grid[1][:1] + grid[0][:2], grid[1][1:] + grid[0][-1:]
+    grid[0], grid[1] = grid[1][:1] + grid[0][:n-1], grid[1][1:] + grid[0][-1:]
 grid[1] = grid[1][::-1]
 
 for line in grid:
