@@ -25,6 +25,7 @@ def can_go(x, y) -> bool:
     return True
 success = False
 def dfs(x, y):
+    global success
     if x == n - 1 and y == m -1:
         success = True
     for dx, dy in zip(dxs, dys):
