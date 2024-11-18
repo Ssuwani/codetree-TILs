@@ -5,7 +5,8 @@ graph = [
     for _ in range(n)
 ]
 visited = [
-    [False] * n for _ in range(n)
+    [False for _ in range(m)]
+    for _ in range(n)
 ]
 dxs, dys = [1, 0], [0, 1]
 
