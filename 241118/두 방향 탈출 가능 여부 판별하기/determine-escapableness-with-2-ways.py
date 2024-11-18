@@ -23,16 +23,14 @@ def can_go(x, y) -> bool:
         return False
 
     return True
-success = False
 def dfs(x, y):
-    global success
-    if x == n - 1 and y == m -1:
-        success = True
     for dx, dy in zip(dxs, dys):
         new_x, new_y = x + dx, y + dy
         if can_go(new_x, new_y):
+            visited[new_x][new_y] = True
             dfs(new_x, new_y)
     
-    
+visited[0][0] = True
+   
 dfs(0, 0)
-print(int(success))
+print(int(visited[n - 1][m - 1]))
